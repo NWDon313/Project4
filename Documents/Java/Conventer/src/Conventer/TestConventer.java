@@ -7,7 +7,6 @@ public class TestConventer {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int input=0;
-		int temp=0;
 		boolean flag = false; 
 		Conventer con = new Conventer();
 		
@@ -21,7 +20,7 @@ public class TestConventer {
 
 			System.out.println("---------------------------------------------");
 			System.out.println("Press 1 to convert Celsious -> Fahrenheit");
-			System.out.println("Press 2 to convert Celsious -> Fahrenheit");
+			System.out.println("Press 2 to convert Fahrenheit -> Celsious");
 			System.out.println("Press 3 Exit");
 			System.out.println("---------------------------------------------");
 			
@@ -32,15 +31,31 @@ public class TestConventer {
 	        }
 				
 			if(input == 1)
-			{	System.out.println("Enter temperature in Celsious: ");
+			{
+				System.out.println("Enter temperature in Celsious: ");
+				int temp=0;
+				try{
 				temp= sc.nextInt();
+				} catch(Exception e) {
+		            System.out.println("Only numbers are accepeted");
+		        }
+				
+				
 				System.out.println(con.farenheit(temp) + " Fahrenheit " );
 			}
 			
 			else if(input ==2)
 			{
 				System.out.println("Enter temperature in Fahrenheit: ");
-				temp= sc.nextInt();
+				int temp=0;
+				try{
+					temp= sc.nextInt();
+				} catch(Exception e) {
+					
+					
+		            System.out.println("Only numbers are accepeted");
+		        }
+
 				System.out.println(con.celsius(temp));
 			}
 			

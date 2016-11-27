@@ -1,19 +1,20 @@
 package Conventer;
 
-public class Conventer {
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Scanner;
 
+public class Conventer {
+	Scanner sc = new Scanner(System.in) ;
 	
-	public int celsius(int far)
+	
+	
+	public double celsius(double cel)
 	{
-		int temp=0;
-		
-		try{
-		temp = (int) ((far - 32) * (5 / 9.0));
-		
-		} catch(Exception e) {
-            System.out.println("Only numbers are accepeted");
-        }
-		
+		double temp=0;
+		temp = (double) ((cel - 32) * (5 / 9.0));
+		temp = round(temp, 2);
+
 		if((temp > 100)||(temp < -273) )
 		{
 			System.out.println("Temperature out of the scale.");
@@ -26,15 +27,13 @@ public class Conventer {
 		}
 	}
 	
-	public int farenheit(int ce)
+	
+	
+	public double farenheit(double far)
 	{
-		int temp =0;
-		try{
-			temp = (int) ((ce * 9 / 5.0) + 32);
-
-		} catch(Exception e) {
-            System.out.println("Only numbers are accepeted");
-        }
+		double temp=0;
+		temp = (double)((far * 9/5.0) +32); 
+		temp = round(temp, 2);
 		
 		if((temp > 212)||(temp < -460) )
 		{
@@ -48,5 +47,13 @@ public class Conventer {
 		}
 		
 		
+	}
+	
+	public static double round(double value, int places) {
+	    if (places < 0) throw new IllegalArgumentException();
+
+	    BigDecimal bd = new BigDecimal(value);
+	    bd = bd.setScale(places, RoundingMode.HALF_UP);
+	    return bd.doubleValue();
 	}
 }
