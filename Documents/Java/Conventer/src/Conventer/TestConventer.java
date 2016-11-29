@@ -28,6 +28,8 @@ public class TestConventer {
 				input= sc.nextInt();
 			} catch(Exception e) {
 	            System.out.println("Only numbers are accepeted");
+	            break;
+	            
 	        }
 				
 			if(input == 1)
@@ -68,6 +70,7 @@ public class TestConventer {
 			else
 			{
 				System.out.println("Your choice is not valid");
+				
 			}
 		}
 		
