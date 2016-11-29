@@ -9,13 +9,13 @@ public class Conventer {
 	
 	
 	
-	public double celsius(double cel)
+	public double celsius(double cel)  /// class to convert celsius to farenheit 
 	{
 		double temp=0;
-		temp = (double) ((cel - 32) * (5 / 9.0));
-		temp = round(temp, 2);
+		temp = (double) ((cel - 32) * (5 / 9.0));  // Equation to convert cel to far 
+		temp = round(temp, 2);  // round to two decimal 
 
-		if((temp > 100)||(temp < -273) )
+		if((temp > 100)||(temp < -273) )  // if temp out of the scale 
 		{
 			System.out.println("Temperature out of the scale.");
 			return 0;
@@ -23,19 +23,19 @@ public class Conventer {
 		
 		else
 		{	
-		return temp;
+		return temp;   //return temperature in farenheit
 		}
 	}
 	
 	
 	
-	public double farenheit(double far)
+	public double farenheit(double far)  // converts temp from farenheit to celsious 
 	{
 		double temp=0;
-		temp = (double)((far * 9/5.0) +32); 
+		temp = (double)((far * 9/5.0) +32); // Equation t
 		temp = round(temp, 2);
 		
-		if((temp > 212)||(temp < -460) )
+		if((temp > 212)||(temp < -460) )   // if temp is out of the scale 
 		{
 			System.out.println("Temperature out of the scale.");
 			return 0;
@@ -49,7 +49,7 @@ public class Conventer {
 		
 	}
 	
-	public static double round(double value, int places) {
+	public static double round(double value, int places) {    // class limits the output to certain numbers after the comma 
 	    if (places < 0) throw new IllegalArgumentException();
 
 	    BigDecimal bd = new BigDecimal(value);

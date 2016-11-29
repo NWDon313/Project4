@@ -11,7 +11,7 @@ public class BoundryTestFarenheit {
 	public void test() {
 		Conventer test = new Conventer();
 		try {
-			assertEquals(-400, test.farenheit(-240), 0.10);
+			assertEquals(-400, test.farenheit(-122), 0.10);
 		}
 		catch (Exception e){
 			
