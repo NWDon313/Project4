@@ -4,13 +4,12 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
 
+import sun.net.www.content.text.Generic;
+
 public class Conventer {
-	Scanner sc = new Scanner(System.in) ;
-	
-	
 	
 	public double celsius(double cel)  /// class to convert celsius to farenheit 
-	{
+	{ 
 		double temp=0;
 		temp = (double) ((cel - 32) * (5 / 9.0));  // Equation to convert cel to far 
 		temp = round(temp, 2);  // round to two decimal 
